@@ -1,0 +1,43 @@
+keypath.string()	value.string()
+ORDERS.description	This is a confirmed order for a product from a user.
+ORDERS.PRODUCT_ID.description	The product ID. This is an internal identifier for the product, NOT the SKU.
+ORDERS.SUBTOTAL.description	The raw, pre-tax cost of the order. Note that this might be different in the future from the product price due to promotions, credits, etc.
+ORDERS.TAX.description	This is the amount of local and federal taxes that are collected on the purchase. Note that other governmental fees on some products are not included here, but instead are accounted for in the subtotal.
+ORDERS.TOTAL.description	The total billed amount.
+ORDERS.ID.description	This is a unique ID for the product. It is also called the “Invoice number” or “Confirmation number” in customer facing emails and screens.
+ORDERS.USER_ID.description	The id of the user who made this order. Note that in some cases where an order was created on behalf of a customer who phoned the order in, this might be the employee who handled the request.
+ORDERS.QUANTITY.description	Number of products bought.
+ORDERS.DISCOUNT.description	Discount amount.
+ORDERS.CREATED_AT.description	The date and time an order was submitted.
+PEOPLE.description	This is a user account. Note that employees and customer support staff will have accounts.
+PEOPLE.ADDRESS.description	The street address of the account’s billing address
+PEOPLE.EMAIL.description	The contact email for the account.
+PEOPLE.PASSWORD.description	This is the salted password of the user. It should not be visible
+PEOPLE.NAME.description	The name of the user who owns an account
+PEOPLE.CITY.description	The city of the account’s billing address
+PEOPLE.LONGITUDE.description	This is the longitude of the user on sign-up. It might be updated in the future to the last seen location.
+PEOPLE.STATE.description	The state or province of the account’s billing address
+PEOPLE.SOURCE.description	The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter
+PEOPLE.BIRTH_DATE.description	The date of birth of the user
+PEOPLE.ZIP.description	The postal code of the account’s billing address
+PEOPLE.ZIP.special_type	type/ZipCode
+PEOPLE.ID.description	A unique identifier given to each user.
+PEOPLE.LATITUDE.description	This is the latitude of the user on sign-up. It might be updated in the future to the last seen location.
+PEOPLE.CREATED_AT.description	"The date the user record was created. Also referred to as the user’s ""join date"""
+PRODUCTS.description	This is our product catalog. It includes all products ever sold by the Sample Company.
+PRODUCTS.CATEGORY.description	The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget
+PRODUCTS.CREATED_AT.description	The date the product was added to our catalog.
+PRODUCTS.EAN.description	The international article number. A 13 digit number uniquely identifying the product.
+PRODUCTS.ID.description	The numerical product number. Only used internally. All external communication should use the title or EAN.
+PRODUCTS.PRICE.description	The list price of the product. Note that this is not always the price the product sold for due to discounts, promotions, etc.
+PRODUCTS.RATING.description	The average rating users have given the product. This ranges from 1 - 5
+PRODUCTS.TITLE.description	The name of the product as it should be displayed to customers.
+PRODUCTS.VENDOR.description	The source of the product.
+REVIEWS.description	These are reviews our customers have left on products. Note that these are not tied to orders so it is possible people have reviewed products they did not purchase from us.
+REVIEWS.BODY.description	The review the user left. Limited to 2000 characters.
+REVIEWS.BODY.special_type	type/Description
+REVIEWS.CREATED_AT.description	The day and time a review was written by a user.
+REVIEWS.ID.description	A unique internal identifier for the review. Should not be used externally.
+REVIEWS.PRODUCT_ID.description	The product the review was for
+REVIEWS.RATING.description	The rating (on a scale of 1-5) the user left.
+REVIEWS.REVIEWER.description	The user who left the review

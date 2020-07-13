@@ -1,0 +1,201 @@
+id.int64()	ean.string()	title.string()	category.string()	vendor.string()	price.double()	rating.double()	created_at.date(2006-03-02 15:04:05.99999999)
+1	1018947080336	Rustic Paper Wallet	Gizmo	Swaniawski, Casper and Hilll	29.463261130679875	4.6	2017-07-19 19:44:56.582
+2	7663515285824	Small Marble Shoes	Doohickey	Balistreri-Ankunding	70.07989613071763	0	2019-04-11 08:49:35.932
+3	4966277046676	Synergistic Granite Chair	Doohickey	Murray, Watsica and Wunsch	35.388744881539054	4	2018-09-08 22:03:20.239
+4	4134502155718	Enormous Aluminum Shirt	Doohickey	Regan Bradtke and Sons	73.99178100854834	3	2018-03-06 02:53:09.937
+5	5499736705597	Enormous Marble Wallet	Gadget	Price, Schultz and Daniel	82.7450976850356	4	2016-10-03 01:47:39.147
+6	2293343551454	Small Marble Hat	Doohickey	Nolan-Wolff	64.95747510229587	3.8	2017-03-29 05:43:40.15
+7	0157967025871	Aerodynamic Linen Coat	Doohickey	Little-Pagac	98.81933684368194	4.3	2017-06-03 03:07:28.061
+8	1078766578568	Enormous Steel Watch	Doohickey	Senger-Stamm	65.89215669329305	4.1	2018-04-30 15:03:53.193
+9	7217466997444	Practical Bronze Computer	Widget	Keely Stehr Group	58.31312098526137	4.2	2019-02-07 08:26:25.647
+10	1807963902339	Mediocre Wooden Table	Gizmo	Larson, Pfeffer and Klocko	31.78621880685793	4.3	2017-01-09 09:51:20.352
+11	3642408008706	Ergonomic Silk Coat	Gadget	Upton, Kovacek and Halvorson	88.30453275661709	0	2018-05-28 08:02:54.482
+12	9482467478850	Sleek Paper Toucan	Gizmo	Mueller-Dare	77.34285054412217	4.4	2017-11-12 14:51:16.221
+13	0399569209871	Synergistic Steel Chair	Gizmo	Mr. Tanya Stracke and Sons	75.0861692740371	0	2016-05-24 23:09:46.392
+14	8833419218504	Awesome Concrete Shoes	Widget	McClure-Lockman	25.09876359271891	4	2017-12-31 14:41:56.87
+15	5881647583898	Aerodynamic Paper Computer	Widget	Friesen-Anderson	25.09876359271891	4	2016-09-08 14:42:57.264
+16	9633135585459	Incredible Bronze Pants	Gadget	Okuneva, Kutch and Monahan	44.07353303251545	4	2017-01-30 22:00:25.015
+17	6704641545275	Enormous Wool Car	Doohickey	Hilpert, Jacobs and Hauck	53.290720311951766	4.3	2017-01-31 11:05:14.863
+18	8909358907493	Lightweight Paper Bottle	Gadget	Wilkinson-Gottlieb	54.60204747398195	4.4	2017-02-11 03:45:40.957
+19	4307721071729	Rustic Concrete Bottle	Doohickey	Gibson, Turner and Douglas	42.67116731707548	4.2	2016-11-06 23:27:12.642
+20	5099742600901	Intelligent Wooden Gloves	Gizmo	Ora Monahan and Sons	24.884330833643833	4	2017-08-25 18:18:36.649
+21	5856636800041	Lightweight Wool Bag	Gadget	Heaney-Windler	40.38334406304544	4.1	2016-06-30 07:30:53.303
+22	7595223735110	Enormous Marble Shoes	Gizmo	Mayer, Kiehn and Turcotte	21.42451996044233	4.2	2017-11-24 20:14:28.415
+23	1576499102253	Fantastic Aluminum Bottle	Widget	Reichert, Johnson and Roob	77.91115072995538	3.8	2018-02-01 16:00:14.334
+24	2820850288674	Synergistic Marble Keyboard	Doohickey	Claude Thompson Group	74.87095783152942	3.4	2017-02-08 05:19:53.456
+25	4863291591550	Durable Marble Watch	Widget	Ritchie, Haley and Pacocha	45.7484264478831	0	2018-10-17 03:54:33.555
+26	3987140172453	Ergonomic Aluminum Plate	Widget	Tia Goyette Group	45.41647453836076	0	2017-11-02 09:54:01.499
+27	6201199361567	Awesome Aluminum Table	Gadget	Alfredo Kuhlman Group	85.01647453836077	2	2019-01-25 13:28:28.728
+28	0010465925138	Rustic Marble Bottle	Gizmo	Morissette, Bartoletti and Cummings	45.41647453836076	0	2018-03-13 11:24:34.663
+29	2434890445616	Durable Steel Toucan	Widget	Odessa Emmerich Inc	82.3829881204479	4.5	2017-09-14 15:30:37.651
+30	1404411876176	Ergonomic Paper Wallet	Gadget	Miles Ryan Group	42.7829881204479	3.7	2016-10-22 11:57:21.218
+31	9095019841233	Rustic Rubber Clock	Doohickey	Quigley, Von and Will	70.43564311419016	4.5	2018-06-05 19:01:10.332
+32	4963935336179	Ergonomic Silk Keyboard	Gadget	Reid Pfannerstill and Sons	71.42990913064094	4	2017-11-15 04:21:04.291
+33	9031323475252	Small Plastic Computer	Doohickey	Spinka-Stokes	31.829909130640935	2.7	2016-05-30 20:38:52.75
+34	0743731223606	Heavy-Duty Wooden Clock	Gadget	Eugenia Kunze LLC	49.535942579421324	4.1	2016-04-28 22:08:19.003
+35	3661250556340	Mediocre Cotton Coat	Doohickey	Cassin-Collins	47.691251538276234	3.6	2017-09-14 22:13:40.971
+36	9687547218818	Mediocre Plastic Clock	Gizmo	Wolf, Beahan and Thiel	87.29125153827623	4.1	2016-04-26 19:29:55.147
+37	2890379323668	Incredible Granite Toucan	Gadget	Parker, O'Connell and Beahan	53.40516136013846	3.3	2019-04-15 13:34:19.931
+38	6154584840805	Lightweight Leather Gloves	Gadget	Bednar, Berge and Boyle	44.04624855892918	3.8	2017-01-09 14:54:58.302
+39	7494558044822	Durable Rubber Computer	Gizmo	Carmela Douglas Inc	76.38772120188973	4.2	2019-01-06 03:22:33.266
+40	0335243754848	Small Copper Plate	Gizmo	Maegan Casper Group	66.44160029487797	3.9	2018-06-22 04:29:03.642
+41	1144906750559	Aerodynamic Paper Coat	Widget	Robyn Padberg Inc	42.33927237126308	4.2	2018-07-16 01:10:38.959
+42	4893655420066	Awesome Rubber Wallet	Widget	Schamberger-Maggio	25.336071424606207	4	2016-09-17 18:21:58.851
+43	0236197465609	Lightweight Marble Bag	Widget	Francis Wolff Group	50.90170136783837	4	2016-07-06 03:02:57.658
+44	4561421124790	Gorgeous Concrete Shoes	Widget	Carol Marvin LLC	50.90170136783837	4	2016-08-25 21:35:12.524
+45	8590367775021	Sleek Wool Wallet	Doohickey	Volkman, Greenfelder and Kiehn	78.6996782532274	2.7	2016-05-04 13:31:42.755
+46	2703547723491	Rustic Linen Keyboard	Gadget	Una Fadel Group	78.6996782532274	4	2016-09-13 06:34:33.279
+47	1909194306167	Aerodynamic Cotton Bottle	Doohickey	Annetta Wyman and Sons	56.05108065511453	4.2	2017-05-19 22:47:54.501
+48	4516685534489	Gorgeous Concrete Chair	Gizmo	Kiehn-Pacocha	82.13922832356072	3.3	2018-02-20 21:54:33.91
+49	4284914664558	Incredible Silk Shoes	Gadget	Schuster-Wyman	87.61910559549149	3.8	2017-06-02 08:07:59.839
+50	0272643267465	Durable Wool Toucan	Widget	Hartmann, Mohr and Stiedemann	35.76013077879841	4.1	2018-06-19 22:53:03.609
+51	4406572671024	Awesome Granite Car	Gizmo	Keshaun Mueller Group	50.433725012700116	3.7	2016-07-07 16:23:10.515
+52	2091630691049	Ergonomic Marble Hat	Widget	Koch-Ruecker	69.1172482676769	4.4	2017-05-22 07:39:32.125
+53	8825217022124	Mediocre Cotton Toucan	Doohickey	Jacobson-Daniel	29.517248267676894	4.4	2016-11-04 00:33:07.221
+54	1943523619306	Intelligent Bronze Knife	Widget	McClure-Murphy	41.395738936015974	3.6	2016-11-22 09:23:14.682
+55	6575325360237	Mediocre Rubber Shoes	Gadget	Considine, Lehner and Maggio	63.84752383956291	0	2016-09-05 23:51:24.82
+56	8296484749050	Awesome Silk Car	Doohickey	Hackett-Reynolds	24.24752383956291	4.1	2017-06-28 13:30:14.212
+57	3769015137275	Gorgeous Bronze Hat	Gizmo	Kuphal, Schowalter and Bogan	81.6149289055996	3.8	2018-03-01 02:39:56.671
+58	5010710584900	Practical Steel Table	Gadget	Smitham, Dach and Bode	52.097186713859216	4.3	2017-12-11 05:22:00.985
+59	8469939413398	Sleek Aluminum Watch	Gizmo	Donnelly, Renner and Barton	59.46809834572766	3.6	2018-07-14 13:14:37.128
+60	4819782507258	Rustic Paper Car	Doohickey	Stroman-Carroll	19.86809834572766	4.1	2017-12-16 11:14:43.264
+61	1726123595351	Mediocre Paper Car	Gizmo	Jordi Effertz LLC	15.691943673970439	4	2017-01-24 03:11:46.606
+62	1087115303928	Awesome Iron Hat	Widget	Von-Gulgowski	89.0134841727878	4	2018-12-06 01:14:59.82
+63	9786855487647	Enormous Granite Wallet	Gizmo	Hills, Fahey and Jones	89.0134841727878	3.8	2018-08-28 07:45:17.744
+64	1960588072419	Incredible Aluminum Knife	Gadget	Noah Anderson and Sons	95.61478497145774	3.7	2017-02-21 11:15:20.545
+65	6409491343148	Ergonomic Silk Table	Widget	Weimann-Cummings	45.4851315098001	3.7	2018-10-01 14:56:06.332
+66	7813908779724	Fantastic Silk Bottle	Widget	Goyette-Smitham	90.77417514071306	4.4	2018-02-07 07:35:04.099
+67	5176352942567	Aerodynamic Granite Bottle	Gizmo	Myriam Macejkovic Inc	27.496539271971862	4.3	2018-11-17 15:52:35.026
+68	0096051986448	Heavy-Duty Copper Toucan	Gizmo	Howe, Kiehn and Price	76.82895921539838	3.9	2016-11-08 03:04:47.544
+69	5592486096660	Synergistic Leather Coat	Doohickey	Wiza, Abbott and Deckow	48.925148695737505	3.5	2019-01-18 13:07:28.238
+70	8207931408888	Small Rubber Clock	Widget	Izabella Dach I and Sons	38.32866920597319	3.6	2017-10-03 13:35:45.886
+71	3806751355669	Sleek Granite Pants	Gadget	Kirlin, Hermann and Stokes	55.202545991924566	0	2017-08-31 06:01:19.229
+72	9978391194435	Rustic Paper Bench	Widget	Senger, Mertz and Murray	94.80254599192457	3.5	2018-03-26 01:19:30.735
+73	0832349515187	Aerodynamic Rubber Bench	Widget	Rowan Kautzer LLC	47.752514839713	4.1	2016-10-31 20:13:40.416
+74	2084705637233	Awesome Plastic Watch	Gadget	Herman Flatley Group	34.08536151591033	4.3	2017-02-21 10:21:53.186
+75	6588791601926	Intelligent Paper Hat	Gadget	Ledner-Satterfield	83.87517582301558	4.5	2018-03-06 09:46:21.08
+76	5065846711133	Sleek Marble Clock	Widget	Koepp, Ondricka and Larkin	42.54947374244324	4.3	2017-11-22 20:48:19.143
+77	4312472827051	Mediocre Leather Computer	Gadget	Fisher-Kemmer	67.34461152277315	4.4	2017-06-23 01:30:23.834
+78	9347854191845	Mediocre Aluminum Shirt	Gizmo	Zemlak, Botsford and Corkery	27.74461152277315	0	2018-01-08 10:49:46.434
+79	1538211018396	Sleek Aluminum Clock	Gizmo	Toy, Deckow and Nitzsche	27.74461152277315	4.3	2016-11-21 13:59:05.122
+80	9522454376759	Small Copper Clock	Widget	Cruickshank-Abernathy	36.60883787357609	3.7	2016-05-02 06:05:29.339
+81	4760375596107	Lightweight Linen Coat	Gizmo	Mason Bashirian and Sons	29.288656154807867	4.2	2017-01-23 15:20:01.221
+82	9802920493181	Heavy-Duty Steel Watch	Gadget	Braeden Gislason and Sons	40.59697158687298	4.5	2016-10-08 10:26:19.492
+83	1468999794635	Lightweight Bronze Table	Gadget	Mr. Johanna Koepp and Sons	54.58418555091025	3.7	2017-12-25 15:37:40.341
+84	8002754191821	Incredible Plastic Chair	Gizmo	Americo Sipes and Sons	54.58418555091025	3.2	2016-12-17 15:11:24.432
+85	5778452195678	Rustic Copper Knife	Gizmo	Reynolds, Gleason and Brekke	36.6006982295235	4.1	2017-03-16 20:07:48.516
+86	2529776156387	Heavy-Duty Silk Chair	Doohickey	Orn, Hilpert and Pfannerstill	61.54291113900164	3.7	2019-04-02 20:38:34.966
+87	6906120611895	Gorgeous Linen Bottle	Widget	Miss Annamae Kutch Group	78.17024226998694	3.5	2018-05-20 00:35:08.271
+88	4886504321812	Lightweight Linen Bottle	Gizmo	Dorothea Balistreri Inc	70.27528021081703	3.6	2018-10-18 15:24:37.058
+89	3084140869281	Awesome Aluminum Keyboard	Widget	Stamm, Crist and Labadie	42.47974183693326	3.3	2016-12-31 05:57:15.715
+90	7532074237028	Incredible Concrete Keyboard	Gizmo	Rodriguez-Kuhlman	82.07974183693327	4	2017-07-02 08:23:34.826
+91	1559730016366	Rustic Rubber Knife	Gizmo	Connelly-Ritchie	43.39621873587423	4.5	2018-09-20 14:53:54.777
+92	7080123588503	Small Granite Gloves	Gizmo	Baumbach-Hilpert	83.2616179105333	4.2	2016-06-20 18:01:28.219
+93	1613963249998	Practical Copper Car	Widget	Medhurst-Reichert	33.212427711035886	0	2017-04-29 18:52:34.219
+94	9753065345920	Awesome Bronze Plate	Widget	Nolan-Heller	72.81242771103588	0	2017-08-19 21:28:45.957
+95	4945934419923	Durable Iron Knife	Gizmo	Schiller, Bogisich and Lockman	33.212427711035886	4.1	2017-09-16 19:33:44.597
+96	4168050315812	Heavy-Duty Silk Car	Doohickey	Bernhard-Grady	69.88096572393577	4	2017-06-07 00:06:12.24
+97	0498395047364	Durable Copper Clock	Doohickey	Halvorson, Lockman and Ruecker	74.94550296436165	4	2018-02-02 15:38:37.723
+98	7485639601133	Mediocre Silk Bottle	Gizmo	Pacocha-Volkman	74.94550296436165	4.5	2019-04-09 16:49:29.198
+99	2646001599860	Enormous Plastic Coat	Gadget	Kuhlman-Kuphal	45.22324323588729	3.3	2018-01-09 10:07:27.255
+100	7667946672475	Lightweight Steel Knife	Gizmo	Legros, Lynch and Howell	45.22324323588729	4	2017-04-27 13:06:30.921
+101	8368305700967	Durable Cotton Bench	Gadget	Gutmann-Breitenberg	93.21658710786936	3.6	2017-04-08 09:49:44.498
+102	2562717359713	Lightweight Granite Hat	Gadget	Dominic Mann Group	31.361435038520785	4	2019-03-29 21:27:53.791
+103	8687358946192	Rustic Silk Pants	Widget	Trantow-Bartell	31.361435038520785	0	2018-05-03 07:44:56.97
+104	4093428378987	Sleek Leather Toucan	Widget	Senger-Doyle	70.96143503852079	0	2018-10-22 05:51:55.845
+105	1790740189682	Fantastic Wool Shirt	Gadget	Jerrod McLaughlin LLC	35.149014295079674	4	2016-06-16 00:07:23.619
+106	0848056924761	Fantastic Steel Knife	Doohickey	Friesen-Langworth	35.149014295079674	4.3	2017-04-25 07:27:37.247
+107	7059492880556	Lightweight Wool Plate	Gadget	Dora Fay and Sons	33.39659192329691	4	2017-11-19 08:15:29.093
+108	3772022926992	Practical Silk Computer	Gadget	Aufderhar-Boehm	33.39659192329691	4	2019-03-03 13:38:54.705
+109	5528517133622	Intelligent Iron Shirt	Widget	Price Kuhic Inc	79.36660712128732	0	2016-08-13 14:20:38.637
+110	4734618834332	Enormous Marble Gloves	Widget	Stanton-Fritsch	37.01783079127111	0	2016-10-16 09:45:43.146
+111	8222420544052	Ergonomic Rubber Bench	Gadget	Hane, Hamill and Jerde	37.01783079127111	3.8	2018-08-22 13:32:49.613
+112	1464781960745	Small Wool Wallet	Doohickey	Ledner-Watsica	27.55292434006023	4.1	2017-02-05 00:51:43.939
+113	0212722801067	Sleek Leather Table	Gadget	Ruecker, Carter and Ortiz	73.65150250790677	3.3	2019-01-21 08:01:53.603
+114	4785470010730	Practical Plastic Keyboard	Doohickey	Wisoky, Pagac and Heaney	51.94130981241432	4	2018-06-26 13:56:49.328
+115	6858015278648	Rustic Silk Knife	Gadget	Mrs. Eugenia Koelpin and Sons	51.94130981241432	4.2	2018-01-27 11:30:35.871
+116	5955704607626	Aerodynamic Concrete Bench	Gizmo	Denesik-Ortiz	76.28323416938524	4.2	2018-09-12 15:23:05.184
+117	5272733645116	Small Concrete Knife	Gizmo	Jefferey Volkman LLC	36.683234169385244	3.5	2016-07-22 20:50:56.145
+118	5291392809646	Synergistic Rubber Shoes	Gadget	Herta Skiles and Sons	38.418408731319154	3.1	2016-10-19 00:34:27.911
+119	5433448189252	Gorgeous Linen Keyboard	Gadget	Alfreda Konopelski II Group	28.95876219768256	3.6	2018-03-24 02:04:35.63
+120	2484897511500	Heavy-Duty Copper Watch	Widget	Jerrell Gulgowski Inc	55.668009001928525	4	2016-09-27 14:38:31.82
+121	0095774502751	Ergonomic Wool Bag	Doohickey	Wolff, Ebert and Hansen	26.96352219205405	5	2017-11-10 04:39:43.211
+122	4733532233696	Gorgeous Marble Plate	Gizmo	Fisher-Purdy	66.56352219205405	3.6	2017-05-08 02:53:55.356
+123	3621077291879	Mediocre Wooden Bench	Gizmo	Flatley-Kunde	73.95430432556165	2	2017-11-16 13:53:14.232
+124	8245402607613	Durable Aluminum Bag	Gizmo	Zemlak-Wiegand	73.95430432556165	4	2018-02-09 15:51:19.689
+125	0255973714120	Aerodynamic Granite Bench	Widget	Lon Wiegand DVM and Sons	53.59799471993963	3.4	2016-05-12 00:21:10.829
+126	9644009305424	Practical Wool Hat	Widget	Emmerich-Nienow	83.49598746872304	4.5	2016-09-27 22:45:23.439
+127	4665903801947	Practical Bronze Watch	Widget	Schamberger-Wehner	89.65344209669612	4	2016-10-12 17:58:13.744
+128	0001664425970	Gorgeous Aluminum Plate	Gizmo	Cale Thompson V and Sons	50.053442096696116	4.3	2017-11-10 14:32:06.165
+129	8844419430964	Small Marble Knife	Gizmo	Turner, Kiehn and Schmitt	98.7781981443958	3.6	2017-12-14 23:45:19.968
+130	8163753213485	Awesome Cotton Shoes	Gizmo	Kuphal, Friesen and Rowe	50.01715912876758	4.4	2017-10-10 02:32:39.532
+131	5738533322232	Practical Aluminum Coat	Widget	Batz-Schroeder	75.41148135558485	4	2017-03-23 15:06:11.999
+132	7668932199532	Sleek Steel Table	Widget	Marge Effertz Jr. Inc	85.25464686555807	3.7	2018-04-01 01:51:42.944
+133	0698616313838	Sleek Wool Watch	Doohickey	Hauck, Ernser and Barton	45.654646865558064	4.3	2016-09-16 20:51:59.814
+134	2339358820724	Practical Paper Bag	Doohickey	Considine, Bogisich and Bauch	28.328223666657742	3.8	2017-05-25 12:10:54.08
+135	6248889948356	Enormous Granite Bottle	Gizmo	Lorenza Mayer Inc	30.536015447715613	4	2019-04-02 07:04:34.857
+136	7570673549500	Mediocre Marble Lamp	Widget	Crona, Block and Homenick	70.13601544771562	4.8	2017-07-05 17:59:19.24
+137	8271165200181	Ergonomic Granite Bottle	Gizmo	Morissette, Dare and Schimmel	45.18165304538124	3.5	2019-02-16 22:36:43.143
+138	1157194463322	Incredible Plastic Watch	Doohickey	Kiel Kassulke Group	75.96718984479077	4	2016-12-18 20:19:28.251
+139	3301617687934	Lightweight Steel Watch	Doohickey	Wuckert, Murazik and Ernser	51.18512212784679	3.2	2016-06-08 10:24:36.94
+140	5050273180195	Sleek Copper Watch	Gadget	Daugherty-Dach	44.53541698384588	4.1	2017-12-01 09:57:43.724
+141	4504719641739	Enormous Cotton Pants	Doohickey	Nikolaus-Hudson	84.13541698384589	4	2018-10-03 19:23:24.077
+142	4686859196154	Ergonomic Marble Computer	Doohickey	Kuphal, Brown and Koss	46.8990203814063	4.3	2017-10-14 02:59:37.713
+143	4009053735033	Rustic Iron Bench	Gizmo	McGlynn, Fay and Kertzmann	40.7988669736962	0	2018-02-04 22:30:01.155
+144	7760442733661	Aerodynamic Bronze Hat	Widget	Schumm, Brown and Wehner	40.7988669736962	0	2019-01-19 02:05:08.927
+145	0899183128263	Awesome Wool Bench	Gizmo	Stark-Bayer	40.7988669736962	4.4	2018-04-27 15:52:11.524
+146	9131148018211	Lightweight Wool Computer	Widget	Theodora Terry and Sons	84.03151414144409	4.3	2016-09-14 10:14:08.091
+147	0006590063715	Mediocre Wool Toucan	Doohickey	Bradtke, Wilkinson and Reilly	44.4315141414441	4.6	2017-07-17 15:41:47.286
+148	3828680930458	Sleek Plastic Shoes	Gadget	Gail Bergstrom Inc	92.65447881697106	4.1	2018-05-26 05:12:30.806
+149	2543248750439	Incredible Aluminum Knife	Widget	Padberg, Senger and Williamson	46.10276691718616	4.1	2017-06-15 08:50:11.957
+150	5935916054838	Synergistic Wool Coat	Gadget	Morar-Schamberger	85.70276691718615	3.9	2018-11-26 07:59:53.001
+151	1878073010375	Lightweight Leather Bench	Gizmo	Marquardt, Crooks and Abshire	61.07534871228964	4	2017-10-16 00:52:50.757
+152	3988126680641	Enormous Aluminum Clock	Widget	Thompson-Wolf	32.59712486600442	3.6	2017-05-26 20:35:11.249
+153	1484994799123	Aerodynamic Leather Computer	Gadget	Wilkinson, Donnelly and Gulgowski	44.532615427854914	4.1	2017-11-24 19:13:23.304
+154	6875096496570	Incredible Bronze Wallet	Widget	Hermiston, O'Hara and Wunsch	54.58353035541507	4.3	2018-07-07 14:51:56.865
+155	7854842811538	Fantastic Rubber Knife	Gadget	Demarcus Brakus Inc	29.183828734551838	4.4	2017-02-22 12:53:05.598
+156	1770178011663	Heavy-Duty Copper Gloves	Gadget	Schinner, Schmitt and Crona	20.41053609936413	4.5	2016-09-30 07:55:10.891
+157	7177157744491	Intelligent Granite Hat	Widget	Dooley-Cummings	93.26282349158673	3	2017-12-01 08:35:33.063
+158	7345418848909	Aerodynamic Leather Toucan	Gizmo	Israel Spinka and Sons	93.26282349158673	4.1	2017-07-09 11:04:50.029
+159	6403813628678	Aerodynamic Cotton Lamp	Widget	Mueller, Mayert and Johnston	23.686782969182406	4.3	2017-02-27 20:15:05.107
+160	3685697688891	Lightweight Linen Hat	Gadget	Oran D'Amore Inc	31.727470408648482	5	2018-05-03 21:43:50.227
+161	5626486088179	Heavy-Duty Rubber Gloves	Doohickey	West, Prohaska and Wunsch	31.727470408648482	4	2016-06-12 23:35:50.174
+162	9458076657016	Gorgeous Copper Knife	Gadget	Connelly-Mitchell	22.378598800110105	3.3	2018-11-25 14:58:59.461
+163	2117622168280	Ergonomic Leather Pants	Widget	Brittany Mueller Inc	22.378598800110105	0	2016-08-01 20:39:00.996
+164	3691313722887	Sleek Bronze Lamp	Doohickey	Bosco-Breitenberg	61.978598800110106	4.4	2016-12-01 22:43:06.579
+165	9182640035008	Aerodynamic Copper Knife	Gizmo	McDermott, Kiehn and Becker	25.536330427467956	2.5	2018-01-14 08:47:02.154
+166	1408483808240	Rustic Copper Hat	Doohickey	Kuhn-O'Reilly	25.536330427467956	4	2016-08-05 07:54:17.191
+167	6009279470754	Gorgeous Paper Bag	Doohickey	Prohaska-Quigley	65.13633042746795	3	2017-10-24 14:18:17.203
+168	6190070243323	Intelligent Paper Car	Gadget	Roscoe Oberbrunner Group	79.28781795635516	0	2016-07-29 03:49:13.673
+169	8933669659420	Small Cotton Chair	Doohickey	Kuhlman-McKenzie	39.68781795635516	4.5	2018-08-04 01:37:27.729
+170	6966709160725	Durable Leather Wallet	Widget	Ruecker-Jakubowski	70.05110494330981	4	2018-11-11 00:14:00.729
+171	2448500145612	Ergonomic Iron Watch	Doohickey	Blake Greenfelder Group	70.05110494330981	4	2017-07-07 19:15:07.738
+172	4201407654834	Practical Aluminum Table	Gizmo	Heathcote-Kirlin	81.57679953529707	3.8	2018-09-02 16:45:49.88
+173	1838229841499	Gorgeous Wooden Car	Gadget	Upton, Schoen and Streich	81.57679953529707	4.1	2016-05-30 07:24:27.215
+174	9216642429807	Rustic Iron Keyboard	Gadget	Barrows-Johns	74.40953929454055	4.4	2017-02-13 07:10:15.529
+175	7067375149041	Fantastic Leather Watch	Doohickey	Lakin-Stroman	78.21653962235106	0	2016-07-31 13:29:50
+176	6424174443243	Enormous Leather Wallet	Widget	Mr. Colton Mayer Group	38.616539622351056	3.6	2016-07-29 09:38:22.862
+177	2125923238175	Heavy-Duty Cotton Bottle	Gadget	Ursula Collins LLC	85.87953212963993	4	2018-12-29 22:35:47.725
+178	3576267834421	Ergonomic Linen Toucan	Widget	Halle Kulas I LLC	78.21975500247076	4.6	2017-05-14 05:22:59.248
+179	6372029072158	Incredible Linen Knife	Doohickey	Casper-Schimmel	45.549391048892794	3.5	2016-08-19 11:20:01.119
+180	8725228831589	Lightweight Copper Wallet	Gadget	Maxime Haley and Sons	45.549391048892794	4.3	2017-07-29 09:06:00.349
+181	8703661046340	Awesome Steel Toucan	Widget	Berge, Mraz and Sawayn	95.92626913650741	4.4	2019-03-31 07:59:18.764
+182	8769809778856	Practical Silk Bottle	Gadget	Devonte Gleichner Inc	56.326269136507406	4	2018-10-19 22:20:01.145
+183	5408760500061	Mediocre Aluminum Lamp	Gizmo	Powlowski, Keebler and Quigley	37.7982748679465	3.7	2016-11-28 02:43:19.996
+184	4198118078267	Practical Granite Plate	Widget	Gaylord-Lesch	77.3982748679465	3.6	2017-04-03 18:01:04.162
+185	3307124431763	Sleek Marble Table	Gadget	Cremin-Williamson	26.384667225677738	0	2016-11-09 14:06:25.683
+186	0225815844582	Ergonomic Concrete Lamp	Gizmo	Theodore Hansen Inc	65.98466722567774	4.2	2018-04-14 15:21:02.626
+187	4347934129886	Fantastic Copper Hat	Gizmo	Janick Harvey LLC	65.98466722567774	4.2	2017-07-03 23:17:30.28
+188	2315609605258	Synergistic Copper Computer	Doohickey	Jones, Hayes and Kshlerin	22.584921698210056	3.5	2019-02-07 19:03:43.752
+189	0038948983000	Gorgeous Marble Computer	Widget	Marvin, Turcotte and Wisozk	62.18492169821006	4.3	2017-08-16 01:01:21.914
+190	1613730311804	Ergonomic Cotton Bag	Gadget	Delphia Bauch Inc	85.72279013719552	3.2	2019-01-22 15:58:52.848
+191	7167715379463	Heavy-Duty Linen Gloves	Gadget	Herman, Gleason and Renner	85.72279013719552	0	2018-05-01 21:16:24.331
+192	1272575087123	Durable Cotton Shirt	Widget	Grady, Greenfelder and Welch	46.122790137195516	3.3	2016-07-28 08:48:29.074
+193	4709231420798	Ergonomic Plastic Bench	Gadget	Hodkiewicz-Brekke	33.587182645381546	0	2017-04-24 18:33:44.161
+194	2952766751666	Heavy-Duty Rubber Bottle	Doohickey	Rosanna Murazik Inc	33.587182645381546	3.5	2016-05-11 09:39:00.357
+195	7384311074268	Incredible Concrete Watch	Gadget	Ford Runolfsson Group	73.18718264538155	5	2019-04-01 23:26:53.703
+196	6316992933962	Heavy-Duty Linen Toucan	Widget	Balistreri-Muller	46.76407124473339	0	2017-03-08 20:05:27.983
+197	2516506541834	Aerodynamic Concrete Lamp	Gizmo	Erika Volkman Group	46.76407124473339	4.6	2017-06-08 08:56:15.049
+198	7153630876392	Enormous Copper Shirt	Gizmo	Considine, Schamberger and Schiller	46.76407124473339	4.1	2017-09-06 19:28:16.574
+199	5522456328132	Mediocre Leather Coat	Widget	Gulgowski, Grimes and Mayer	76.95334253952366	3.6	2016-08-19 01:21:25.232
+200	7317365230007	Intelligent Steel Car	Gadget	Pouros, Nitzsche and Mayer	48.802638078661005	4	2018-06-12 06:08:53.212
