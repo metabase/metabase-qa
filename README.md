@@ -33,6 +33,16 @@ As an example, the command below will run a pre-populated Mongo 4.0 database.
 docker run --rm -p 27017:27017 --name meta-mongo-sample metabase/qa-databases:mongo-sample-4.0
 ```
 
+### Supported Databases and Versions
+
+These images are currently pushed to the public [metabase/qa-databases](https://hub.docker.com/r/metabase/qa-databases/tags) repository:
+
+- `metabase/qa-databases:mongo-sample-4.0`
+- `metabase/qa-databases:mysql-sample-5.7`
+- `metabase/qa-databases:mysql-sample-8`
+- `metabase/qa-databases:postgres-sample-11`
+- `metabase/qa-databases:postgres-sample-12`
+
 ## Building
 
 Building is manual for now until we support more databases.
@@ -59,3 +69,4 @@ If the Sample Database has changed in Postgres, you can run `./update_data.sh` i
 
 - [Saving a Postgres Database in a Docker Image](https://nickjanetakis.com/blog/docker-tip-79-saving-a-postgres-database-in-a-docker-image)
 - [eksctl](https://github.com/weaveworks/eksctl/blob/master/Makefile.docker) has a good example of committing an intermediate image.
+- A [couple](https://github.com/mvanholsteijn/docker-makefile/blob/master/Makefile) [other](https://github.com/philpep/dockerfiles/blob/master/Makefile) good Docker/Makefile tooling examples
