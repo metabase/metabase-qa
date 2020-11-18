@@ -23,14 +23,25 @@ What this looks like in practice, is we have the following configurations:
 
 Use Docker images of the form: `metabase/qa-databases:{DATABASE}-{QA_TYPE}-{VERSION}`
 
-Currently the only supported databases are `mongo` and `postgres` and the only supported "QA type" is `sample`.
+Currently the only supported databases are `mongo`, `postgres` and `mysql` and the only supported "QA type" is `sample`.
 
 Supported database versions have their own Dockerfile in each directory.
 
-As an example, the command below will run a pre-populated Mongo 4.0 database.
+Listed below are the examples for running each of the supported databases in Docker.
 
+#### Mongo 4
 ```shell
 docker run --rm -p 27017:27017 --name meta-mongo-sample metabase/qa-databases:mongo-sample-4.0
+```
+
+#### PostgreSQL 12
+```shell
+docker run --rm -p 5432:5432 --name meta-postgres12-sample metabase/qa-databases:postgres-sample-12
+```
+
+#### MySQL 8
+```shell
+docker run --rm -p 3306:3306 --name meta-mysql8-sample metabase/qa-databases:mysql-sample-8
 ```
 
 ### Supported Databases and Versions
