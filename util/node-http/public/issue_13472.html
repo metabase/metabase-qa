@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Metabase Embedding Test</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var startTime = Date.now();
+      var interval = setInterval(function () {
+        var elapsedTime = Date.now() - startTime;
+        document.getElementById("timer").innerHTML = (
+          elapsedTime / 1000
+        ).toFixed(1);
+      }, 100);
+      window.onload = function () {
+        clearInterval(interval);
+      };
+    </script>
+    <h1 id="timer"></h1>
+
+    <!-- ->
+
+<script type="text/javascript">
+  window.onload = function(){
+    for (let step = 0; step < 8; step++) {
+        var f = document.createElement('iframe');
+        f.src = "http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6Mjk2fSwicGFyYW1zIjp7fSwiaWF0IjoxNjAxNjQ0ODMxLCJfZW1iZWRkaW5nX3BhcmFtcyI6e319.V20fOWJ1Se9qeNd2lpORHuEMLREkJOE2Nx7fWMg10BY#bordered=true&titled=true";
+        f.width = "400"; 
+        f.height = "300";
+        f.frameborder = "0";
+        f.allowtransparency = "true";
+        document.body.appendChild(f);
+    }
+  }
+</script>
+
+<!-- -->
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6OH0sInBhcmFtcyI6e30sImlhdCI6MTYwMTY0NDgzMSwiX2VtYmVkZGluZ19wYXJhbXMiOnt9fQ.SupLSPYSzvtrpO8H3GTcn2ZAX70mn990UJnXvX7-7BM#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <!-- -->
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6OX0sInBhcmFtcyI6e30sImlhdCI6MTYwMTY0NDgzMSwiX2VtYmVkZGluZ19wYXJhbXMiOnt9fQ.3vuu33sGJ6w-UoCszDHhNwtaRi4UErs8nGEgNk62Pus#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6MTB9LCJwYXJhbXMiOnt9LCJpYXQiOjE2MDE2NDQ4MzEsIl9lbWJlZGRpbmdfcGFyYW1zIjp7fX0.NZpY0bLPFTQtnsH5RMchl47Yc56I1DqS55UqNWwqS_o#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6MTF9LCJwYXJhbXMiOnt9LCJpYXQiOjE2MDE2NDQ4MzEsIl9lbWJlZGRpbmdfcGFyYW1zIjp7fX0.ZcsmFlHWhYqsXUWHIgovR97SeUCr14npkjL6_UVyjTs#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6MTJ9LCJwYXJhbXMiOnt9LCJpYXQiOjE2MDE2NDQ4MzEsIl9lbWJlZGRpbmdfcGFyYW1zIjp7fX0.mmwIIoPqkUpEoXnmfl--hXOKSW0emwDT7Rnhh7pEbg0#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6MTN9LCJwYXJhbXMiOnt9LCJpYXQiOjE2MDE2NDQ4MzEsIl9lbWJlZGRpbmdfcGFyYW1zIjp7fX0.6573YWwyDz_M8Cs3a2bPtOWGxR8cgdkeErsH5k0up98#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6MzAyfSwicGFyYW1zIjp7fSwiaWF0IjoxNjAxNjQ1MDY0LCJfZW1iZWRkaW5nX3BhcmFtcyI6e319.QD6onB-bYtrEPkIqpPVnnCQWR9JgqpMMJH1zFX_nYDQ#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <iframe
+      src="http://localhost:3000/embed/question/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJxdWVzdGlvbiI6MzAzfSwicGFyYW1zIjp7fSwiaWF0IjoxNjAxNjQ1MTMwLCJfZW1iZWRkaW5nX3BhcmFtcyI6e319.SdZYxiDyHjXk0gRbo9Q6q_79gAFaddEYUoTdRB3WZD0#bordered=true&titled=true"
+      style="border: 5px solid red"
+      onload="this.style.border='5px solid green';"
+      width="400"
+      height="300"
+      allowtransparency
+    ></iframe>
+
+    <!-- -->
+  </body>
+</html>

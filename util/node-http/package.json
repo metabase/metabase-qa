@@ -1,0 +1,16 @@
+{
+  "name": "metabase-qa-util-server",
+  "version": "1.0.0",
+  "description": "Metabase QA utility HTTP server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@dacort",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serve-index": "^1.9.1",
+    "smtp-server": "^3.8.0"
+  }
+}
