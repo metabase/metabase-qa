@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+  body
+    script. 
+      var startTime = Date.now();
+      var updateTimer = function(startTime) {
+        var elapsedTime = Date.now() - startTime;
+        document.getElementById("timer").innerHTML = (
+          elapsedTime / 1000
+        ).toFixed(1);
+      }
+      var interval = setInterval(function () {
+        updateTimer(startTime);
+      }, 100);
+      window.onload = function () {
+        clearInterval(interval);
+        updateTimer(startTime);
+      };
+    h1(id='timer')
+    h1 Repro for 
+      a(href="https://github.com/metabase/metabase/issues/13472") metabase#13472
+
+    each url in config.embedURLs
+        iframe(src=`${url}`, style="border: 5px solid red", onload="this.style.border='5px solid green';", width="400", height="300", allowtransparency)

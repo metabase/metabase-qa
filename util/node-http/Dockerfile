@@ -10,9 +10,10 @@ COPY package*.json ./
 RUN npm install
 
 # Bundle app source
-COPY server.js http.js smtp.js ./
+COPY src/ ./src/
 COPY public/ ./public/
+COPY views/ ./views/
 
 EXPOSE 8080
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "src/server.js" ]
