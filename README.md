@@ -27,6 +27,11 @@ Currently the only supported databases are `mongo`, `postgres` and `mysql` and t
 
 Supported database versions have their own Dockerfile in each directory.
 
+We use a standard set of database names and users for our sample images:
+- Database name: `sample`
+- Username: `metabase`
+- Password: `metasample123`
+
 Listed below are the examples for running each of the supported databases in Docker.
 
 #### Mongo 4
