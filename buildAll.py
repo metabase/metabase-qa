@@ -27,7 +27,7 @@ def build_image(database, version):
         move_data(f"dbs/{database}/data/", f"dbs/{image}/")
         step = '2. Building image'
         log_step(step)
-        client.images.build(path=f"dbs/{image}/", tag=f"qa-databases:{database}-sample-{version}", forcerm=True)
+        client.images.build(path=f"dbs/{image}/", tag=f"metabase/qa-databases:{database}-sample-{version}", forcerm=True)
         step = '3. Releasing data'
         log_step(step)
         move_data(f"dbs/{image}/", f"dbs/{database}/data/")
@@ -131,6 +131,12 @@ available_versions = {
     },
     "sqlite": {
         0
+    },
+    "mongo":
+    {
+        4.0,
+        4.2,
+        4.4
     }
 }
 

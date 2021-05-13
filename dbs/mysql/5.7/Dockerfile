@@ -7,6 +7,7 @@ ENV MYSQL_DATABASE=sample MYSQL_USER=metabase MYSQL_PASSWORD=metasample123 MYSQL
 COPY sample_data.sql.gz /docker-entrypoint-initdb.d/sample_data.sql.gz
 
 # Similar to other images, we specify a custom mysql data directory so it can be persisted to an image
+RUN mkdir /var/lib/mysql-mbsample
 CMD ["--datadir", "/var/lib/mysql-mbsample"]
 
 # Nope: "--character-set-server", "utf8mb4"
