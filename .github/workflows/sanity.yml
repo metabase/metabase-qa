@@ -1,7 +1,6 @@
 name: JAR Sanity Check
 
 on:
-  push:
   schedule:
     - cron: "0 6 * * *"
 
