@@ -51,6 +51,8 @@ jobs:
       name: Retrieve previously downloaded JAR
       with:
         name: metabase-jar
+    - name: Reveal its version.properties
+      run: jar xf metabase.jar version.properties && cat version.properties
     - name: Display when and where it was downloaded
       run: |
         cat timestamp
