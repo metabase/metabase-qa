@@ -31,7 +31,7 @@ jobs:
           ./timestamp
           ./SHA256.sum
 
-  check:
+  check-jar:
     runs-on: ubuntu-20.04
     name: check (java ${{ matrix.java-version }})
     needs: download
@@ -63,5 +63,37 @@ jobs:
     - name: Wait for Metabase to start
       run: while ! curl -s localhost:3000/api/health; do sleep 1; done
       timeout-minutes: 3
+    - name: Check API health
+      run: curl -s localhost:3000/api/health
+
+  check-container:
+    runs-on: ubuntu-20.04
+    name: check container
+    needs: download
+    timeout-minutes: 10
+    steps:
+    - uses: actions/download-artifact@v2
+      name: Retrieve the checksum of previously downloaded JAR
+      with:
+        name: metabase-jar
+        path: download
+    - name: Grab metabase.jar from the Docker image
+      run: |
+        docker run -d --name testrun --entrypoint sleep metabase/metabase 500
+        docker cp testrun:/app/metabase.jar ./metabase.jar
+        docker kill testrun
+    - name: Show its version.properties
+      run: jar xf metabase.jar version.properties && cat version.properties
+    - name: Compare it with the downloaded JAR from the website
+      run: |
+        cp download/SHA256.sum .
+        sha256sum -c SHA256.sum
+    - name: Launch container
+      run: docker run -dp 3000:3000 metabase/metabase
+      timeout-minutes: 5
+    - run: docker ps
+    - name: Wait for Metabase to start
+      run: while ! curl -s localhost:3000/api/health; do sleep 1; done
+      timeout-minutes: 1
     - name: Check API health
       run: curl -s localhost:3000/api/health
