@@ -9,8 +9,10 @@ for version in 11 12; do
     BUILD_IMAGE_NAME="metabase-qa/postgres-sample:${version}"
     CONTAINER_REPO_TAG="metabase/qa-databases:postgres-sample-${version}"
 
+    cp ./data/sample_data.sql.gz ${version}/sample_data.sql.gz
     # First build the image
     docker build -t ${BUILD_IMAGE_NAME} -f ${version}/Dockerfile .
+    rm ${version}/sample_data.sql.gz
 
     # Then run the image so the database gets populated
     docker run -d --name ${INTERMEDIATE_CONTAINER_NAME} ${BUILD_IMAGE_NAME}

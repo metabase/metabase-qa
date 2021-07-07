@@ -1,4 +1,4 @@
-FROM mongo:4.0
+FROM mongo:4.4.3
 
 # We use a standard set of database names and users for our sample images
 ENV MONGO_INITDB_ROOT_USERNAME=metabase MONGO_INITDB_ROOT_PASSWORD=metasample123 MONGO_INITDB_DATABASE=sample
