@@ -95,3 +95,71 @@ jobs:
       timeout-minutes: 3
     - name: Check API health
       run: curl -s localhost:3000/api/health
+
+  verify-container-ee:
+    runs-on: ubuntu-20.04
+    needs: release-ee
+    timeout-minutes: 10
+    steps:
+    - uses: actions/download-artifact@v2
+      name: Retrieve previously prepared JAR
+      with:
+        name: metabase-jar-ee
+        path: github-release
+    - name: Show its version.properties
+      run: jar xf github-release/metabase.jar version.properties && cat version.properties
+    - name: Get the tag from version.properties
+      id: version
+      run: echo "::set-output name=tag::$(grep tag version.properties | cut -d = -f 2)"
+    - name: Grab metabase.jar from the Docker image
+      run: |
+        docker run -d --name testrun --entrypoint sleep metabase/metabase-enterprise:${{steps.version.outputs.tag }} 500
+        docker cp testrun:/app/metabase.jar ./metabase.jar
+        docker kill testrun
+    - name: Compare it with the JAR from GitHub releases
+      run: |
+        cp github-release/SHA256.sum .
+        sha256sum -c SHA256.sum
+    - name: Launch container
+      run: docker run -dp 3000:3000 metabase/metabase-enterprise:${{steps.version.outputs.tag }}
+      timeout-minutes: 5
+    - run: docker ps
+    - name: Wait for Metabase to start
+      run: while ! curl -s localhost:3000/api/health; do sleep 1; done
+      timeout-minutes: 1
+    - name: Check API health
+      run: curl -s localhost:3000/api/health
+
+  verify-container-oss:
+    runs-on: ubuntu-20.04
+    needs: release-oss
+    timeout-minutes: 10
+    steps:
+    - uses: actions/download-artifact@v2
+      name: Retrieve previously prepared JAR
+      with:
+        name: metabase-jar-oss
+        path: github-release
+    - name: Show its version.properties
+      run: jar xf github-release/metabase.jar version.properties && cat version.properties
+    - name: Get the tag from version.properties
+      id: version
+      run: echo "::set-output name=tag::$(grep tag version.properties | cut -d = -f 2)"
+    - name: Grab metabase.jar from the Docker image
+      run: |
+        docker run -d --name testrun --entrypoint sleep metabase/metabase:${{steps.version.outputs.tag }} 500
+        docker cp testrun:/app/metabase.jar ./metabase.jar
+        docker kill testrun
+    - name: Compare it with the JAR from GitHub releases
+      run: |
+        cp github-release/SHA256.sum .
+        sha256sum -c SHA256.sum
+    - name: Launch container
+      run: docker run -dp 3000:3000 metabase/metabase:${{steps.version.outputs.tag }}
+      timeout-minutes: 5
+    - run: docker ps
+    - name: Wait for Metabase to start
+      run: while ! curl -s localhost:3000/api/health; do sleep 1; done
+      timeout-minutes: 1
+    - name: Check API health
+      run: curl -s localhost:3000/api/health
