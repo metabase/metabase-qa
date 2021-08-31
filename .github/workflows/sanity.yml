@@ -1,4 +1,4 @@
-name: JAR Sanity Check
+name: JAR, Docker, and Mac app Sanity Check
 
 on:
   schedule:
@@ -97,3 +97,19 @@ jobs:
       timeout-minutes: 1
     - name: Check API health
       run: curl -s localhost:3000/api/health
+
+  check-macapp-dmg:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 5
+    steps:
+    - name: Get Metabase.dmg from Metabase website
+      run: |
+        curl -o download.html https://www.metabase.com/start/oss/mac.html
+        DMG_DOWNLOAD_URL=`grep 'meta http-equiv="refresh"' download.html | grep -oEi 'https://([a-z0-9A-Z\./]*\.dmg)'`
+        echo $DMG_DOWNLOAD_URL > url.txt
+        echo "----- Downloading DMG from $DMG_DOWNLOAD_URL -----"
+        curl -OL $DMG_DOWNLOAD_URL
+        stat ./Metabase.dmg
+        date | tee timestamp
+    - name: Calculate SHA256 checksum
+      run: sha256sum ./Metabase.dmg | tee SHA256.sum
