@@ -36,7 +36,7 @@ Listed below are the examples for running each of the supported databases in Doc
 
 #### Mongo 4
 ```shell
-docker run --rm -p 27017:27017 --name meta-mongo-sample metabase/qa-databases:mongo-sample-4.0
+docker run --rm -p 27017:27017 --name meta-mongo4-sample metabase/qa-databases:mongo-sample-4.0
 ```
 
 #### PostgreSQL 12
