@@ -1,4 +1,4 @@
-name: JAR, Docker, and Mac app Sanity Check
+name: JAR and Docker Sanity Check
 
 on:
   schedule:
@@ -97,37 +97,3 @@ jobs:
       timeout-minutes: 1
     - name: Check API health
       run: curl -s localhost:3000/api/health
-
-  check-macapp-dmg:
-    runs-on: ubuntu-20.04
-    needs: download
-    timeout-minutes: 5
-    steps:
-    - uses: actions/download-artifact@v2
-      name: Retrieve the checksum of previously downloaded JAR
-      with:
-        name: metabase-jar
-        path: download
-    - name: Get Metabase.dmg from Metabase website
-      run: |
-        curl -o download.html https://www.metabase.com/start/oss/mac.html
-        DMG_DOWNLOAD_URL=`grep 'meta http-equiv="refresh"' download.html | grep -oEi 'https://([a-z0-9A-Z\./]*\.dmg)'`
-        echo $DMG_DOWNLOAD_URL > url.txt
-        echo "----- Downloading DMG from $DMG_DOWNLOAD_URL -----"
-        curl -OL $DMG_DOWNLOAD_URL
-        stat ./Metabase.dmg
-        date | tee timestamp
-    - name: Calculate SHA256 checksum
-      run: sha256sum ./Metabase.dmg | tee SHA256.sum
-    - run: sudo apt install -y dmg2img
-    - run: dmg2img Metabase.dmg Metabase.img
-    - name: Extract the contents
-      run: 7z x ./Metabase.img
-    - name: Grab metabase.jar from the image
-      run: cp ./Metabase/Metabase.app/Contents/Resources/metabase.jar .
-    - name: Show its version.properties
-      run: jar xf metabase.jar version.properties && cat version.properties
-    - name: Compare it with the downloaded JAR from the website
-      run: |
-        cp download/SHA256.sum .
-        sha256sum -c SHA256.sum
