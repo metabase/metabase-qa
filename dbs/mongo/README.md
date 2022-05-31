@@ -94,3 +94,9 @@ One issue is that the `discount` field in `orders` can be null. So we had to add
 use sample
 db.orders.find({'discount': {$exists: false}})
 ```
+
+## Running the server with SSL support
+
+```shell
+docker run -it --rm -p 27017:27017 --name metamongo metabase/qa-databases:mongo-ssl-5.0 mongod --dbpath /data/db2/ --tlsMode requireTLS --tlsCertificateKeyFile /etc/mongo/metamongo.pem --tlsCAFile /etc/mongo/metaca.crt
+```
