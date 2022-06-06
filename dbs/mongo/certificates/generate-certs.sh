@@ -23,7 +23,7 @@ generate () {
 
 selfsign () {
     local target=$1
-    certdata "${target}" | openssl req -new -x509 -key "${target}.key" -out "${target}.crt"
+    certdata "${target}" | openssl req -new -x509 -days "${validity_days}" -key "${target}.key" -out "${target}.crt"
 }
 
 request () {
