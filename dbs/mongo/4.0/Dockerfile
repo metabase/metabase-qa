@@ -13,6 +13,8 @@ COPY data/load.sh /docker-entrypoint-initdb.d/
 # in the image so that they can be pulled from them for local testing.
 COPY certificates/metabase.* certificates/metamongo.* certificates/metaca.* /etc/mongo/
 
+COPY 4.0/mongo-with-ssl.sh /bin/
+
 # In order to have an image with pre-populated data, we override the db path
 RUN mkdir /data/db2/ \
     && chown -R mongodb:mongodb /data/db2
