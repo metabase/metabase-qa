@@ -6,4 +6,3 @@ FROM postgres:14-alpine
 ENV POSTGRES_DB=sample POSTGRES_USER=metabase POSTGRES_PASSWORD=metasample123 PGDATA=/data
 
 COPY dbs/postgres/data/sample_data.sql.gz /docker-entrypoint-initdb.d/sample_data.sql.gz
-

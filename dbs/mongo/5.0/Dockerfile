@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-FROM mongo:5.0
-=======
 FROM mongo:5
->>>>>>> 5ef6737 (Intermediate commit)
 
 # We use a standard set of database names and users for our sample images
 ENV MONGO_INITDB_ROOT_USERNAME=metabase MONGO_INITDB_ROOT_PASSWORD=metasample123 MONGO_INITDB_DATABASE=sample
@@ -13,7 +9,7 @@ COPY dbs/mongo/certificates/*.crt dbs/mongo/certificates/*.key dbs/mongo/certifi
 
 # Copy mongo server and client certificates. The client certificates are stored
 # in the image so that they can be pulled from them for local testing.
-COPY certificates/metabase.* certificates/metamongo.* certificates/metaca.* /etc/mongo/
+COPY dbs/mongo/certificates/metabase.* dbs/mongo/certificates/metamongo.* dbs/mongo/certificates/metaca.* /etc/mongo/
 
 # In order to have an image with pre-populated data, we override the db path
 RUN mkdir /data/db2/ \
