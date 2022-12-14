@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 FROM mongo:5.0
+=======
+FROM mongo:5
+>>>>>>> 5ef6737 (Intermediate commit)
 
 # We use a standard set of database names and users for our sample images
 ENV MONGO_INITDB_ROOT_USERNAME=metabase MONGO_INITDB_ROOT_PASSWORD=metasample123 MONGO_INITDB_DATABASE=sample
 
 # We copy in our initialization data
 COPY dbs/mongo/data/*.tsv dbs/mongo/data/load.sh /docker-entrypoint-initdb.d/
-COPY ../certificates/*.crt ../certificates/*.key ../certificates/*.pem /etc/mongo/
+COPY dbs/mongo/certificates/*.crt dbs/mongo/certificates/*.key dbs/mongo/certificates/*.pem /etc/mongo/
 
 # Copy mongo server and client certificates. The client certificates are stored
 # in the image so that they can be pulled from them for local testing.

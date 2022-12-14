@@ -95,8 +95,16 @@ use sample
 db.orders.find({'discount': {$exists: false}})
 ```
 
+<<<<<<< HEAD
 ## Running the server with SSL support
 
 ```shell
 docker run -it --rm -p 27017:27017 --name metamongo metabase/qa-databases:mongo-ssl-5.0 mongod --dbpath /data/db2/ --tlsMode requireTLS --tlsCertificateKeyFile /etc/mongo/metamongo.pem --tlsCAFile /etc/mongo/metaca.crt
 ```
+=======
+If you need to run Mongo with certs, just do:
+
+```shell
+docker run -it --rm -p 27017:27017 --name metamongo metabase/qa-databases:mongo-ssl-5.0 --tlsMode requireTLS --tlsCertificateKeyFile /etc/mongo/metamongo.pem --tlsCAFile /etc/mongo/metaca.crt
+```
+>>>>>>> 5ef6737 (Intermediate commit)
