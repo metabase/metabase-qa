@@ -72,12 +72,6 @@ These images are built with this project, not all are currently pushed to the pu
 - `metabase/qa-databases:mssql-sample-2017`
 - `metabase/qa-databases:mssql-sample-2019`
 
-## Building
-
-Building is manual for now by running `python3 buildAll.py` passing the arguments of database and version, like `python3 buildAll.py postgres 13` and you'll receive a postgres image. If you pass just postgres, you'll build the 3 versions of postgres, and if you don't pass any arguments, make sure you have enough disk space, and a good cup of coffee, as you'll build all images with all versions.
-
-*NOTE*: mssql does not want to build automatically for unknown reasons, but builds without issues if you do `docker build .` on its folder (remember to include the gzipped data file on the folder before)
-
 ### Sample Data
 
 For Postgres, MySQL, MSSQL and SQLite, `sample_data.sql.gz` contains the Metabase Sample Database. On each of them the syntax has been modified to adapt to each database limitation or quirks that they have
@@ -88,9 +82,6 @@ For Mongo, we extract the sample data from Postgres into files that are then loa
 
 If the Sample Database has changed, you can run `./update_data.sh` in `dbs/mongo` to update the data files.
 
-### TODO:
-- remove makefiles and shell scripts in case they are not needed anymore
-
 ## References
 
 - [Saving a Postgres Database in a Docker Image](https://nickjanetakis.com/blog/docker-tip-79-saving-a-postgres-database-in-a-docker-image)
@@ -99,4 +90,4 @@ If the Sample Database has changed, you can run `./update_data.sh` in `dbs/mongo
 
 ## Versions
 1) Damon's magic
-2) Luiggi adding more dockerfiles + a builder in python. The reason was to use a higher level language to include tests in the future
+2) Luiggi adding Dockerfiles and building images with github actions
