@@ -25,8 +25,8 @@ jobs:
         run: docker buildx build -f dbs/mongo/4.0/Dockerfile -t metabase/qa-databases:mongo-sample-4 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
       - name: Create mongo 5 container image
         run: docker buildx build -f dbs/mongo/5.0/Dockerfile -t metabase/qa-databases:mongo-sample-5 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
-      - name: Create mongo 5 container image
-        run: docker buildx build -f dbs/mongo/6.0/Dockerfile -t metabase/qa-databases:mongo-sample-5 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mongo 6 container image
+        run: docker buildx build -f dbs/mongo/6.0/Dockerfile -t metabase/qa-databases:mongo-sample-6 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
     
   build-mssql:
     runs-on: ubuntu-22.04
