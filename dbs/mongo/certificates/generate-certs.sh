@@ -23,7 +23,11 @@ generate () {
 
 selfsign () {
     local target=$1
+<<<<<<< HEAD
     certdata "${target}" | openssl req -new -x509 -days "${validity_days}" -key "${target}.key" -out "${target}.crt"
+=======
+    certdata "${target}" | openssl req -new -x509 -key "${target}.key" -out "${target}.crt"
+>>>>>>> 39c9469 (Add instructions for building backend test images for Mongo)
 }
 
 request () {
