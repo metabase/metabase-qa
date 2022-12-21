@@ -3,8 +3,16 @@
 # Builds (and for now pushes) all Mongo images
 
 # Loop through our different versions, hard-coded for now
-for version in 4.0 5.0; do
+for version in latest 6.0 5.0 4.4 4.2 4.0; do
     echo "Building Mongo ${version}"
+
+    # `mongo` was deprecated in 5.0
+    MONGO_SHELL="mongosh"
+    if [[ $version == 4* ]]; then
+      MONGO_SHELL="mongo"
+    fi
+    echo $MONGO_SHELL
+
     INTERMEDIATE_CONTAINER_NAME="mongo-${version}-$(date +%s)"
     BUILD_IMAGE_NAME="metabase-qa/mongo-sample:${version}"
     CONTAINER_REPO_TAG="metabase/qa-databases:mongo-sample-${version}"
@@ -16,7 +24,7 @@ for version in 4.0 5.0; do
     docker run -d --name ${INTERMEDIATE_CONTAINER_NAME} ${BUILD_IMAGE_NAME}
 
     # We have to wait for the database to be populated
-    while ! docker exec -it ${INTERMEDIATE_CONTAINER_NAME} mongo \
+    while ! docker exec -it ${INTERMEDIATE_CONTAINER_NAME} ${MONGO_SHELL} \
         -u metabase \
         -p metasample123 sample \
         --eval 'db.orders.count()' \
