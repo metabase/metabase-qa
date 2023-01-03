@@ -1,0 +1,114 @@
+name: Build and push to Dockerhub
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-mongo:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Create mongo 4.2 container image
+        run: docker buildx build -f dbs/mongo/4.2/Dockerfile -t metabase/qa-databases:mongo-sample-4.2 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mongo 4.4 container image
+        run: docker buildx build -f dbs/mongo/4.4/Dockerfile -t metabase/qa-databases:mongo-sample-4.4 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mongo 5 container image
+        run: docker buildx build -f dbs/mongo/5.0/Dockerfile -t metabase/qa-databases:mongo-sample-5 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mongo 6 container image
+        run: docker buildx build -f dbs/mongo/6.0/Dockerfile -t metabase/qa-databases:mongo-sample-6 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+
+  # this will be enabled once we upload mssql images
+  # build-mssql:
+  #   runs-on: ubuntu-22.04
+  #   timeout-minutes: 30
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Set up QEMU
+  #       uses: docker/setup-qemu-action@v2
+  #     - name: Set up Docker Buildx
+  #       id: buildx
+  #       uses: docker/setup-buildx-action@v2
+  #     - name: Login to Docker Hub
+  #       uses: docker/login-action@v2
+  #       with:
+  #         username: ${{ secrets.DOCKERHUB_USERNAME }}
+  #         password: ${{ secrets.DOCKERHUB_TOKEN }}
+  #     - name: Create mssql 2017 image
+  #       run: docker buildx build -f dbs/mssql/2017/Dockerfile -t metabase/qa-databases:mssql-sample-2017 --push --compress --no-cache .
+  #     - name: Create mssql 2019 image
+  #       run: docker buildx build -f dbs/mssql/2019/Dockerfile -t metabase/qa-databases:mssql-sample-2019 --push --compress --no-cache .
+  #     - name: Create mssql 2022 image
+  #       run: docker buildx build -f dbs/mssql/2022/Dockerfile -t metabase/qa-databases:mssql-sample-2022 --push --compress --no-cache .
+
+  build-mysql:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Create mysql 5.7 image
+        run: docker buildx build -f dbs/mysql/5.7/Dockerfile -t metabase/qa-databases:mysql-sample-5.7 --push --compress --no-cache .
+      - name: Create mysql 8 image
+        run: docker buildx build -f dbs/mysql/8/Dockerfile -t metabase/qa-databases:mysql-sample-8 --push --compress --no-cache .
+
+  build-postgres:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Create postgres 9 image
+        run: docker buildx build -f dbs/postgres/9/Dockerfile -t metabase/qa-databases:postgres-sample-9 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create postgres 14 image
+        run: docker buildx build -f dbs/postgres/14/Dockerfile -t metabase/qa-databases:postgres-sample-14 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create postgres 15 image
+        run: docker buildx build -f dbs/postgres/15/Dockerfile -t metabase/qa-databases:postgres-sample-15 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+  
+  build-oracle:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Create oracle 9 image
+        run: docker buildx build -f dbs/oracle/Dockerfile -t metabase/qa-databases:oracle-sample-9 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .

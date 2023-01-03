@@ -1,4 +1,4 @@
-FROM mysql:8
+FROM mysql:latest
 
 # We use a standard set of database names and users for our sample images
 ENV MYSQL_DATABASE=sample
