@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create mongo 4.2 container image
-        run: docker buildx build -f dbs/mongo/4.2/Dockerfile -t metabase/qa-databases:mongo-sample-4.2 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build --build-args tag=4.2 -f dbs/mongo/4.2/Dockerfile -t metabase/qa-databases:mongo-sample-4.2 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
 
   # this will be enabled once we upload mssql images
   # build-mssql:
@@ -59,7 +59,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create mysql 5.7 image
-        run: docker buildx build -f dbs/mysql/5.7/Dockerfile -t metabase/qa-databases:mysql-sample-5.7 --push --compress --no-cache .
+        run: docker buildx build --build-args tag=5.7 -f dbs/mysql/5.7/Dockerfile -t metabase/qa-databases:mysql-sample-5.7 --push --compress --no-cache .
 
   build-postgres:
     runs-on: ubuntu-22.04
@@ -77,7 +77,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create postgres 9 image
-        run: docker buildx build -f dbs/postgres/9/Dockerfile -t metabase/qa-databases:postgres-sample-9 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build --build-args tag=9 -f dbs/postgres/9/Dockerfile -t metabase/qa-databases:postgres-sample-9 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
   
   build-oracle:
     runs-on: ubuntu-22.04
@@ -95,4 +95,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create oracle 21 image
-        run: docker buildx build -f dbs/oracle/Dockerfile -t metabase/qa-databases:oracle-sample-21 --push --compress --no-cache --platform .
+        run: docker buildx build -f dbs/oracle/Dockerfile -t metabase/qa-databases:oracle-xe-21.3 --push --compress --no-cache --platform .

@@ -1,4 +1,5 @@
-FROM postgres:9-alpine
+ARG tag=latest
+FROM postgres:${tag}
 
 # We use a standard set of database names and users for our sample images
 ENV POSTGRES_DB=sample

@@ -1,4 +1,5 @@
-FROM mysql:latest
+ARG tag=latest
+FROM mysql:${tag}
 
 # We use a standard set of database names and users for our sample images
 ENV MYSQL_DATABASE=sample
