@@ -104,4 +104,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create oracle 21 image
-        run: docker buildx build -f dbs/oracle/Dockerfile -t metabase/qa-databases:oracle-xe-21.3 --push --compress --no-cache --platform .
+        run: docker buildx build -f dbs/oracle/Dockerfile -t metabase/qa-databases:oracle-xe-21.3 --push --compress --no-cache .
