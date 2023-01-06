@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create mongo ${{ matrix.version }} container image
-        run: docker buildx build --build-ars tag=${{ matrix.version }} -f dbs/mongo/${{ matrix.version }}/Dockerfile -t metabase/qa-databases:mongo-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build --build-ars tag=${{ matrix.version }} -f dbs/mongo/Dockerfile -t metabase/qa-databases:mongo-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
 
   # this will be enabled once we upload mssql images
   # build-mssql:
@@ -65,7 +65,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create mysql ${{ matrix.version }} image
-        run: docker buildx build --build-arg tag=${{ matrix.version }} -f dbs/mysql/${{ matrix.version }}/Dockerfile -t metabase/qa-databases:mysql-sample-${{ matrix.version }} --push --compress --no-cache .
+        run: docker buildx build --build-arg tag=${{ matrix.version }} -f dbs/mysql/Dockerfile -t metabase/qa-databases:mysql-sample-${{ matrix.version }} --push --compress --no-cache .
 
   build-postgres:
     runs-on: ubuntu-22.04
@@ -86,7 +86,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create postgres ${{ matrix.version }} image
-        run: docker buildx build --build-arg tag=${{ matrix.version }} -f dbs/postgres/${{ matrix.version }}/Dockerfile -t metabase/qa-databases:postgres-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build --build-arg tag=${{ matrix.version }} -f dbs/postgres/Dockerfile -t metabase/qa-databases:postgres-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
   
   build-oracle:
     runs-on: ubuntu-22.04
