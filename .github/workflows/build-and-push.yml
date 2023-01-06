@@ -7,6 +7,9 @@ on:
 
 jobs:
   build-mongo:
+    strategy:
+      matrix:
+        version: [4.2, 4.4, 5, 6]
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
@@ -21,8 +24,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Create mongo 4.2 container image
-        run: docker buildx build --build-args tag=4.2 -f dbs/mongo/4.2/Dockerfile -t metabase/qa-databases:mongo-sample-4.2 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mongo ${matrix.version} container image
+        run: docker buildx build --build-args tag=${matrix.version} -f dbs/mongo/${matrix.version}/Dockerfile -t metabase/qa-databases:mongo-sample-${matrix.version} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
 
   # this will be enabled once we upload mssql images
   # build-mssql:
@@ -44,6 +47,8 @@ jobs:
   #       run: docker buildx build -f dbs/mssql/2017/Dockerfile -t metabase/qa-databases:mssql-sample-2017 --push --compress --no-cache .
 
   build-mysql:
+    matrix:
+        version: [5.7, 8]
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
@@ -58,12 +63,14 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Create mysql 5.7 image
-        run: docker buildx build --build-args tag=5.7 -f dbs/mysql/5.7/Dockerfile -t metabase/qa-databases:mysql-sample-5.7 --push --compress --no-cache .
+      - name: Create mysql ${matrix.version} image
+        run: docker buildx build --build-args tag=${matrix.version} -f dbs/mysql/${matrix.version}/Dockerfile -t metabase/qa-databases:mysql-sample-${matrix.version} --push --compress --no-cache .
 
   build-postgres:
     runs-on: ubuntu-22.04
     timeout-minutes: 30
+    matrix:
+        version: [9, 10, 11, 12, 13, 14, 15]
     steps:
       - uses: actions/checkout@v3
       - name: Set up QEMU
@@ -76,8 +83,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Create postgres 9 image
-        run: docker buildx build --build-args tag=9 -f dbs/postgres/9/Dockerfile -t metabase/qa-databases:postgres-sample-9 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create postgres ${matrix.version} image
+        run: docker buildx build --build-args tag=${matrix.version} -f dbs/postgres/${matrix.version}/Dockerfile -t metabase/qa-databases:postgres-sample-${matrix.version} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
   
   build-oracle:
     runs-on: ubuntu-22.04
