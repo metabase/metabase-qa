@@ -1,0 +1,29 @@
+name: Deploy weekly
+on:
+  schedule:
+    - cron: '0 0 * * 7'
+
+jobs:
+  nightly:
+    name: Build weekly
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Create postgres latest image
+        run: docker buildx build -f dbs/postgres/latest/Dockerfile -t metabase/qa-databases:postgres-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mongo latest image
+        run: docker buildx build -f dbs/mongo/latest/Dockerfile -t metabase/qa-databases:mongo-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mysql latest image
+        run: docker buildx build -f dbs/mysql/latest/Dockerfile -t metabase/qa-databases:mysql-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
