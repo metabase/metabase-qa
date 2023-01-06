@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create mongo ${{ matrix.version }} container image
-        run: docker buildx build --build-ars tag=${{ matrix.version }} -f dbs/mongo/Dockerfile -t metabase/qa-databases:mongo-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build --build-arg tag=${{ matrix.version }} -f dbs/mongo/Dockerfile -t metabase/qa-databases:mongo-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
 
   # this will be enabled once we upload mssql images
   # build-mssql:
