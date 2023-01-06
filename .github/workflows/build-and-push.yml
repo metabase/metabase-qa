@@ -47,7 +47,8 @@ jobs:
   #       run: docker buildx build -f dbs/mssql/2017/Dockerfile -t metabase/qa-databases:mssql-sample-2017 --push --compress --no-cache .
 
   build-mysql:
-    matrix:
+    strategy:
+      matrix:
         version: [5.7, 8]
     runs-on: ubuntu-22.04
     timeout-minutes: 30
@@ -69,7 +70,8 @@ jobs:
   build-postgres:
     runs-on: ubuntu-22.04
     timeout-minutes: 30
-    matrix:
+    strategy:
+      matrix:
         version: [9, 10, 11, 12, 13, 14, 15]
     steps:
       - uses: actions/checkout@v3
