@@ -130,9 +130,6 @@ jobs:
   build-mssql:
     runs-on: ubuntu-22.04
     timeout-minutes: 30
-    strategy:
-      matrix:
-        version: [2017, 2019, 2022]
     steps:
       - uses: actions/checkout@v3
       - name: Set up QEMU
@@ -145,5 +142,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Create postgres ${{ matrix.version }} image
-        run: docker buildx build --build-arg tag=${{ matrix.version }} -f dbs/postgres/Dockerfile -t metabase/qa-databases:postgres-sample-${{ matrix.version }} --push --compress --no-cache --platform linux/amd64 .
+      - name: Create mssql 2017 image
+        run: docker buildx build --build-arg tag=2017 -f dbs/mssql/2017/Dockerfile -t metabase/qa-databases:mssql-sample-2017 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+      - name: Create mssql 2019 image
+        run: docker buildx build --build-arg tag=2019 -f dbs/mssql/2019/Dockerfile -t metabase/qa-databases:mssql-sample-2019 --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
