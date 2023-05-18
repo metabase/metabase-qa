@@ -22,8 +22,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Create postgres latest image
-        run: docker buildx build -f dbs/postgres/latest/Dockerfile -t metabase/qa-databases:postgres-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build -f dbs/postgres/Dockerfile -t metabase/qa-databases:postgres-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
       - name: Create mongo latest image
-        run: docker buildx build -f dbs/mongo/latest/Dockerfile -t metabase/qa-databases:mongo-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build -f dbs/mongo/Dockerfile -t metabase/qa-databases:mongo-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
       - name: Create mysql latest image
-        run: docker buildx build -f dbs/mysql/latest/Dockerfile -t metabase/qa-databases:mysql-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
+        run: docker buildx build -f dbs/mysql/Dockerfile -t metabase/qa-databases:mysql-sample-latest --push --compress --no-cache --platform linux/arm64/v8,linux/amd64 .
