@@ -98,11 +98,11 @@ COPY (
     SELECT
         id AS "id.int64()",
         account_id AS "account_id.int64()",
-        email,
-        date_received,
-        rating,
-        rating_mapped,
-        body
+        email AS "email.string()",
+        date_received AS "date_received.date(2006-03-02 15:04:05.99999999)",
+        rating AS "rating.int32()",
+        rating_mapped AS "rating_mapped.string()",
+        body AS "body.string()",
     FROM feedback
 ) TO '/tmp/sample-feedback.tsv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER E'\t');
 
