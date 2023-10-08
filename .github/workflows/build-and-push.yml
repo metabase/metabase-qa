@@ -9,7 +9,7 @@ jobs:
   build-mongo:
     strategy:
       matrix:
-        version: [4.2, 4.4, 5, 6]
+        version: [4.2, 4.4, 5, 6, 7]
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
